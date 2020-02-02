@@ -9,21 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class Kai_01
- */
+
 @WebServlet("/Kai_01")
 public class Kai_01 extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Kai_01() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("doget");
 //		傳遞來的資料一般分成檔頭、檔案內容...這裡先用檔頭head部分，以下方法可以看出傳遞進來的名稱
