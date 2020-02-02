@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="Kai_04" method="get">
+		<input type="text" name="account" /><br>
+		<input type="text" name="password" /><br>
+		<input type="radio" name="gender" value="m" checked/> Male <br>
+		<input type="radio" name="gender" value="f"/> Female <br>
+		favorite:
+		<input type="checkbox" name="like" value="1"/>1
+		<input type="checkbox" name="like" value="2"/>2
+		<input type="checkbox" name="like" value="3"/>3<br>
+		<input type="checkbox" name="like" value="4"/>4
+		<input type="checkbox" name="like" value="5"/>5
+		<input type="checkbox" name="like" value="6"/>6<br>
+		for(String like:likes ){
+		System.out.println(like);
+		}
+		
+		
+		
+		<input type="reset"  value="clear"/><br><!-- 回復預設 -->
+		<select name="area">
+		<option>東</option><!-- 若value沒註明，那會回傳東南西北 -->
+		<option>南</option>
+		<option>西</option>
+		<option>北</option>
+		</select>
+		<textarea name:"why");>
+		<!-- 在表單裡，有name的會被送出傳回伺服器 -->
+		<input type="submit" value="GO !" />
+	</form>
+</body>
+</html>
