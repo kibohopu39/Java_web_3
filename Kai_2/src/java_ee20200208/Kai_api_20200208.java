@@ -10,7 +10,7 @@ public class Kai_api_20200208 {
 		if (hashPW.startsWith("$2a$")) {
 			isRight = BCrypt.checkpw(plainPW, hashPW);
 		} else {
-			isRight = true;
+			isRight = false;
 		}
 		return isRight;
 	}

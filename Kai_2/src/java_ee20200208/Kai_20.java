@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 //承Kai_19，輸入資料，並驗證是否存在資料庫
+//但我們沒有處理如果帳號一樣的話，該如何區別
 /**
  * Servlet implementation class Kai_20
  */
