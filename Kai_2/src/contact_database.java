@@ -21,7 +21,7 @@ public class contact_database {
 			info.put("serverTimezone", "Asia/Taipei");
 
 			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/opendata", info);
-			String sql = "INSERT INTO local_snacks(cname, address, tel, latlng,picurl) VALUES(?,?,?,?,?)";
+			String sql = "INSERT INTO local_snacks(cname,address,tel,latng,picurl) VALUES(?,?,?,?,?)";
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			
 			//--------------
@@ -40,18 +40,17 @@ public class contact_database {
 			String json=sb.toString();
 			JSONArray root=new JSONArray(json);
 			System.out.println(root.length());
+			System.out.println(root.getJSONObject(0));
 			for(int i=0;i<root.length();i++) {
 				JSONObject row=root.getJSONObject(i);
 				pstmt.setString(1, row.getString("Name"));
-				pstmt.setString(1, row.getString("Address"));
-				pstmt.setString(1, row.getString("Tel"));
-				pstmt.setString(1, row.getString("Coordinate"));
-				pstmt.setString(1, row.getString("PicURL"));
+				pstmt.setString(2, row.getString("Address"));
+				pstmt.setString(3, row.getString("Tel"));
+				pstmt.setString(4, row.getString("Coordinate"));
+				pstmt.setString(5, row.getString("PicURL"));
+				pstmt.executeUpdate();
 			}
-//			
-//			
-//			
-//			
+
 			reader.close();
 			
 			System.out.println("OK");
