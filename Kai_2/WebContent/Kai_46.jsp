@@ -4,21 +4,23 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 
 <!-- 詢問是account是不是空的，是才能新增 -->
-<c:if test="${empty param.account}">
-	<sql:setDataSource driver="com.mysql.cj.jdbc.Driver"
-		url="jdbc:mysql://localhost:3306/opendata?serverTimezone=Asia/Taipei"
-		user="root" password="root"></sql:setDataSource>
-
 	<!-- 連上資料庫後，把得到的資料用SQL語法新增到資料庫裡 -->
-	<sql:update var="rs1">
-		INSERT * INTO kai_45(realNames,Account,passwd) values(?,?,?)
+<c:if test="${!empty param.account}">
+	<sql:setDataSource 
+		driver="com.mysql.cj.jdbc.Driver"
+		url="jdbc:mysql://localhost:3306/opendata?serverTimezone=Asia/Taipei"
+		user="root" password="root"/>
+	
+
+	<sql:update var="count">
+		INSERT INTO kai_45(realNames,Account,passwd) values(?,?,?)
 		<sql:param>${param.realname }</sql:param>
 		<sql:param>${param.account }</sql:param>
 		<sql:param>${param.passwd }</sql:param>
 	</sql:update>
-	<!-- 返回Kai_45.jsp那一頁 -->
-	
+	<c:redirect url="Kai_45.jsp"></c:redirect>
 </c:if>
+	<!-- 返回Kai_45.jsp那一頁 -->
 
 
 
