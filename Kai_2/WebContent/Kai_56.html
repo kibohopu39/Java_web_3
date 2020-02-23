@@ -1,0 +1,25 @@
+<script>
+	let xhttp = new XMLHttpRequest();
+	let i = 1;
+	
+	setInterval(() => {
+		i++;
+		test1();
+	}, 500);
+	// [a-zA-Z$_][a-zA-Z0-9$_];
+	function test1(){
+		xhttp.onreadystatechange = function() {
+			  if (this.readyState == 4 && this.status == 200) {
+			    document.getElementById("here").innerHTML = 
+			    	i + " : " +this.responseText;
+			  }
+			};
+		xhttp.open("GET", "brad57.jsp", true);
+		xhttp.send();
+	}
+	
+	
+</script>
+<input type="button" onclick="test0()" value="test1" />
+<hr>
+<div id="here"></div>
