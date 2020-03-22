@@ -39,8 +39,8 @@ public class Kai_07 extends HttpServlet {
 			if (name.equals("upload")) {
 				if (sname.length() == 0) {
 					continue;
-
-					part.write(createFileName(prefix, i++));
+//
+//					part.write(createFileName(prefix, i++));
 				}
 			}
 		}

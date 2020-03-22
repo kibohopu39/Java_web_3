@@ -23,7 +23,8 @@
 <title>Insert title here</title>
 </head>
 <style>
-tr { <c:choose> 
+tr { 
+<c:choose> 
 	<c:when test="${status.index%2==0}">pink</c:when> 
 	<c:otherwise>yellow</c:otherwise> 
 	</c:choose>

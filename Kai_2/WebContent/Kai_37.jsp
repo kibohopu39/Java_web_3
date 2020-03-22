@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="Kai_mysql.Kai_36_api" %>
 <!DOCTYPE html>
 <html>
 <head>

@@ -19,24 +19,36 @@
 	<%
 		//request.setAttribute("x", "123");
 	%>
-	<c:set var="x" value="123" scope= "page"/>
+	<c:set var="x" value="123" scope="page" />
 	x=${x }
 	<br>
 	<%
 		//pageContext.setAttribute("y", "456");
 	%>
-	<c:set var="y" value="456" scope="request"/>
-	x=${requestScope.y }<br>
-	
-	<c:out value="hello" /><br>
-	<c:out value="${'hello' }" /><br>
-	<c:out value="${z }" default="heyhey" /><br>
-	${z!=null?z:"no value" }<br>
-	
-	<c:set var="var1" />12345<br>
-	<c:out value="${var1 }" default="heyhey" /><br>
-	
-	
-	
+	<c:set var="y" value="456" scope="request" />
+	x=${requestScope.y }
+	<br>
+
+	<c:out value="hello" />
+	<br>
+	<c:out value="${'hello' }" />
+	<br>
+	<c:out value="${z }" default="heyhey" />
+	<br> ${z!=null?z:"no value" }
+	<br>
+
+	<c:set var="var1" />
+	12345
+	<br>
+	<c:out value="${var1 }" default="heyhey" />
+	<br> ${member1 }
+	<br>
+	<c:set target="${member1 }" property="account">ddd</c:set>
+	<c:set target="${member1 }" property="age">18</c:set>
+	<c:set target="${member1 }" property="realname">"chiang"</c:set>
+	${member1.account }:${member1.age }:${member1.realname }<br>
+
+	<c:remove var="memeber1" />
+
 </body>
 </html>

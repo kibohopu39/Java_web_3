@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 //承Kai_19，輸入資料，並驗證是否存在資料庫
 //但我們沒有處理如果帳號一樣的話，該如何區別
 /**
@@ -38,6 +39,7 @@ public class Kai_20 extends HttpServlet {
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		}
+
 
 	}
 
